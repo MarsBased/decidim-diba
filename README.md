@@ -25,6 +25,10 @@ GraphicsMagick is required to be installed. For example (with `brew`): `brew ins
 
 More information can be found in the Decidim github repository: https://github.com/decidim/decidim
 
+**Running tests**
+
+Run: `rspec`
+
 
 **Testing emails in development**
 
