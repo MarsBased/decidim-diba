@@ -8,6 +8,7 @@ gem 'sidekiq'
 gem 'puma', '~> 3.0'
 gem 'uglifier', '>= 1.3.0'
 
+
 group :development, :test do
   gem 'decidim-dev', git: 'https://github.com/decidim/decidim.git'
   gem 'byebug', platform: :mri
@@ -17,6 +18,10 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker', '~> 1.7.3'
   gem 'webmock'
+
+  # Rspec with rails and spring integration
+  gem 'rspec-rails'
+  gem 'spring-commands-rspec'
 end
 
 group :development do

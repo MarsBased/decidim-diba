@@ -22,6 +22,10 @@ To update the Decidim installation on this project, first we update Gemfile depe
 
 More information can be found in the Decidim github repository: https://github.com/decidim/decidim
 
+**Running tests**
+
+Run: `rspec`
+
 
 **Testing emails in development**
 
