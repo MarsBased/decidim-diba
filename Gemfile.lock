@@ -600,10 +600,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.0)
   rspec-rails
-<<<<<<< HEAD
   rubocop
-=======
->>>>>>> 192b010c483b85c12cd6bbca475cd431d2ad8f59
   sidekiq
   spring
   spring-commands-rspec

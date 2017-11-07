@@ -1,7 +1,0 @@
-example_id                                    | status | run_time        |
---------------------------------------------- | ------ | --------------- |
-<<<<<<< HEAD
-./spec/integration/system_status_spec.rb[1:1] | passed | 0.88635 seconds |
-=======
-./spec/integration/system_status_spec.rb[1:1] | passed | 0.83703 seconds |
->>>>>>> 192b010c483b85c12cd6bbca475cd431d2ad8f59
