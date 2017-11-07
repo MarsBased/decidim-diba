@@ -599,8 +599,8 @@ DEPENDENCIES
   pry-coolline
   pry-rails
   puma (~> 3.0)
-  rubocop
   rspec-rails
+  rubocop
   sidekiq
   spring
   spring-commands-rspec
