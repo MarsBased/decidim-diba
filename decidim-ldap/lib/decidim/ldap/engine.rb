@@ -4,7 +4,6 @@ require 'rails'
 require 'active_support/all'
 
 require 'decidim/ldap/extensions/organization_with_ldap'
-require 'decidim/ldap/extensions/devise_with_ldap'
 
 module Decidim
   module Ldap
@@ -41,13 +40,6 @@ module Decidim
         config.to_prepare do
           Decidim::Organization.include Decidim::Ldap::Extensions::OrganizationWithLdap
         end
-      end
-
-      initializer 'decidim_ldap.devise_with_ldap' do
-        Decidim::Devise::SessionsController
-          .include(Decidim::Ldap::Extensions::SessionsControllerWithLdap)
-        Decidim::Devise::RegistrationsController
-          .include(Decidim::Ldap::Extensions::RegistrationsControllerWithLdap)
       end
 
       initializer 'decidim_ldap.add_ldap_account_authorizations' do |_app|
