@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.4.2'
+ruby '2.5.1'
 
-gem 'decidim', '~> 0.9.3'
+gem 'decidim', '~> 0.10.1'
 gem 'decidim-age_action_authorization', path: 'decidim-age_action_authorization'
 gem 'decidim-census', path: 'decidim-census'
 gem 'decidim-diba_census_api', path: 'decidim-diba_census_api'
@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'decidim-dev', '~> 0.9.3'
+  gem 'decidim-dev', '~> 0.10.1'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'

@@ -1,5 +1,5 @@
 module Decidim
   module AgeActionAuthorization
-    VERSION = '0.9.3'.freeze
+    VERSION = '0.10.1'.freeze
   end
 end
