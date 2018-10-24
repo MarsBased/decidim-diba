@@ -1,3 +1,4 @@
+<%= render 'invalid_rows' if @invalid_rows.present? %>
 
 <div class="card">
   <div class="card-divider">
@@ -7,11 +8,11 @@
   </div>
   <div class="card-section">
     <% if @status.count > 0 %>
-      <p><%= t('decidim.census.admin.show.data', count: @status.count, 
+      <p><%= t('decidim.census.admin.show.data', count: @status.count,
         due_date: l(@status.last_import_at, format: :long)) %>
       </p>
-      <%= link_to t('decidim.census.admin.destroy.title'), 
-        censuses_path, 
+      <%= link_to t('decidim.census.admin.destroy.title'),
+        censuses_path,
         method: :delete,
         class: 'button alert',
         data: { confirm: t('decidim.census.admin.destroy.confirm') } %>
@@ -20,7 +21,6 @@
     <% end %>
   </div>
 </div>
-
 
 <div class="card">
   <div class="card-divider">
@@ -37,7 +37,3 @@
     <% end %>
   </div>
 </div>
-
-
-
-
