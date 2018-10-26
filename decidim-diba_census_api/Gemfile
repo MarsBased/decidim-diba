@@ -1,5 +1,0 @@
-source 'https://rubygems.org'
-
-gem 'decidim-age_action_authorization', path: '../decidim-age_action_authorization'
-
-gemspec

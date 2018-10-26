@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.5.1'
 
+gem 'rails', '=5.2.0'
+
 gem 'decidim', '~> 0.12.2'
 gem 'decidim-age_action_authorization', path: 'decidim-age_action_authorization'
 gem 'decidim-census', path: 'decidim-census'

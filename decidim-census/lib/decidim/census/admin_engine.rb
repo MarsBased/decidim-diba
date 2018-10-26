@@ -16,7 +16,11 @@ module Decidim
                     decidim_census_admin.censuses_path,
                     icon_name: 'spreadsheet',
                     position: 7,
-                    active: :inclusive
+                    active: :inclusive,
+                    if: allowed_to?(:create,
+                                    :census,
+                                    {},
+                                    [Decidim::Census::Admin::Permissions])
         end
       end
 

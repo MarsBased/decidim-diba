@@ -29,7 +29,8 @@ module Decidim
         end
 
         def destroy
-          authorize! :destroy, CensusDatum
+          enforce_permission_to :destroy, :census
+
           CensusDatum.clear(current_organization)
           redirect_to censuses_path, notice: t('.success')
         end
