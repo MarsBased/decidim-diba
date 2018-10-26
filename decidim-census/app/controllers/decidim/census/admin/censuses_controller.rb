@@ -1,7 +1,7 @@
 module Decidim
   module Census
     module Admin
-      class CensusesController < Decidim::Admin::ApplicationController
+      class CensusesController < Decidim::Census::Admin::ApplicationController
 
         CENSUS_AUTHORIZATIONS = %w[diba_authorization_handler
                                    census_authorization_handler].freeze
@@ -10,13 +10,13 @@ module Decidim
                       unless: :census_authorization_active_in_organization?
 
         def show
-          enforce_permission_to :create, :component
+          enforce_permission_to :create, :census
 
           @status = Status.new(current_organization)
         end
 
         def create
-          enforce_permission_to :create, :component
+          enforce_permission_to :create, :census
 
           if params[:file]
             data = CsvData.new(params[:file].path)

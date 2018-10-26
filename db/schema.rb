@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_26_081144) do
+ActiveRecord::Schema.define(version: 2018_10_26_084553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2018_10_26_081144) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "children_count", default: 0
+    t.float "weight", default: 1.0
+    t.string "external_id"
     t.index ["decidim_accountability_status_id"], name: "decidim_accountability_results_on_status_id"
     t.index ["decidim_component_id"], name: "index_decidim_accountability_results_on_decidim_component_id"
     t.index ["decidim_scope_id"], name: "index_decidim_accountability_results_on_decidim_scope_id"
@@ -345,20 +347,6 @@ ActiveRecord::Schema.define(version: 2018_10_26_081144) do
     t.index ["decidim_component_id"], name: "index_decidim_debates_debates_on_decidim_component_id"
   end
 
-  create_table "decidim_dummy_resources_dummy_resources", force: :cascade do |t|
-    t.string "title"
-    t.text "address"
-    t.float "latitude"
-    t.float "longitude"
-    t.datetime "published_at"
-    t.bigint "decidim_component_id"
-    t.bigint "decidim_author_id"
-    t.bigint "decidim_category_id"
-    t.bigint "decidim_scope_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "decidim_follows", force: :cascade do |t|
     t.bigint "decidim_user_id", null: false
     t.string "decidim_followable_type"
@@ -610,10 +598,10 @@ ActiveRecord::Schema.define(version: 2018_10_26_081144) do
 
   create_table "decidim_pages_pages", id: :serial, force: :cascade do |t|
     t.jsonb "body"
-    t.integer "decidim_feature_id"
+    t.integer "decidim_component_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["decidim_feature_id"], name: "index_decidim_pages_pages_on_decidim_feature_id"
+    t.index ["decidim_component_id"], name: "index_decidim_pages_pages_on_decidim_component_id"
   end
 
   create_table "decidim_participatory_process_groups", id: :serial, force: :cascade do |t|
