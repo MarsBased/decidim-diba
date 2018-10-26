@@ -7,6 +7,7 @@ require 'decidim/verifications'
 require 'decidim/core/test'
 require 'social-share-button'
 require 'helpers'
+require 'json'
 
 RSpec.configure do |c|
   c.include Decidim::Census::Helpers

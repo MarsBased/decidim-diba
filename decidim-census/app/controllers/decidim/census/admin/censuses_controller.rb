@@ -1,4 +1,3 @@
-
 module Decidim
   module Census
     module Admin
@@ -11,12 +10,14 @@ module Decidim
                       unless: :census_authorization_active_in_organization?
 
         def show
-          authorize! :show, CensusDatum
+          enforce_permission_to :create, :component
+
           @status = Status.new(current_organization)
         end
 
         def create
-          authorize! :create, CensusDatum
+          enforce_permission_to :create, :component
+
           if params[:file]
             data = CsvData.new(params[:file].path)
             CensusDatum.insert_all(current_organization, data.values)

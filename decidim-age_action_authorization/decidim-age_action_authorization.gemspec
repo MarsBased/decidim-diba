@@ -16,7 +16,6 @@ Gem::Specification.new do |s|
   s.test_files = Dir['spec/**/*']
 
   s.add_dependency 'decidim', Decidim::AgeActionAuthorization::VERSION
-  s.add_dependency 'rails', '~> 5.1.4'
 
   s.add_development_dependency 'decidim-dev', Decidim::AgeActionAuthorization::VERSION
 end
