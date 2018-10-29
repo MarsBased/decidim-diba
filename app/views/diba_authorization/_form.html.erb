@@ -16,15 +16,3 @@
 </div>
 
 <%= form.hidden_field :handler_name %>
-
-<%
-  # Unfortunately this is the only way to avoid rendering the submit button twice. One for the
-  # managed_users#new view and the other for the authorization handler view.
-%>
-<% if controller_name != 'managed_users' %>
-  <div class="actions">
-    <%= form.submit t('authorize',
-                      scope: 'decidim.verifications.authorizations.new'),
-                      class: "button expanded" %>
-  </div>
-<% end %>

@@ -1,6 +1,7 @@
 <div class="field">
   <%= form.text_field :id_document %>
 </div>
+
 <div class="field date">
   <%= form.date_select :birthdate, start_year: 1900,
                                    end_year: Date.current.year,
@@ -10,4 +11,5 @@
                                       year: t(".date_select.year")
                                     } %>
 </div>
+
 <%= form.hidden_field :handler_name %>
