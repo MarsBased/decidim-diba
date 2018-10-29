@@ -9,17 +9,20 @@ module Decidim
                       unless: :diba_api_authorization_active_in_organization?
 
         def show
-          authorize! :show, Decidim::Organization
+          enforce_permission_to :edit, :organization, organization: current_organization
+
           @organization = current_organization
         end
 
         def edit
-          authorize! :edit, Decidim::Organization
+          enforce_permission_to :edit, :organization, organization: current_organization
+
           @organization = current_organization
         end
 
         def update
-          authorize! :update, Decidim::Organization
+          enforce_permission_to :update, :organization, organization: current_organization
+
           @organization = current_organization
           @organization.update!(organization_params)
           redirect_to api_config_path, notice: t('.success')
