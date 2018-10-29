@@ -1,8 +1,6 @@
-
 <div class="field">
   <%= form.text_field :id_document %>
 </div>
-
 <div class="field date">
   <%= form.date_select :birthdate, start_year: 1900,
                                    end_year: Date.current.year,
@@ -12,17 +10,4 @@
                                       year: t(".date_select.year")
                                     } %>
 </div>
-
 <%= form.hidden_field :handler_name %>
-
-<%
-  # Unfortunately this is the only way to avoid rendering the submit button twice. One for the
-  # managed_users#new view and the other for the authorization handler view.
-%>
-<% if controller_name != 'managed_users' %>
-  <div class="actions">
-    <%= form.submit t('authorize',
-                      scope: 'decidim.verifications.authorizations.new'),
-                      class: "button expanded" %>
-  </div>
-<% end %>
