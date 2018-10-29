@@ -9,19 +9,19 @@ module Decidim
                       unless: :diba_api_authorization_active_in_organization?
 
         def show
-          enforce_permission_to :edit, :organization, organization: current_organization
+          enforce_permission_to :update, :organization
 
           @organization = current_organization
         end
 
         def edit
-          enforce_permission_to :edit, :organization, organization: current_organization
+          enforce_permission_to :update, :organization
 
           @organization = current_organization
         end
 
         def update
-          enforce_permission_to :update, :organization, organization: current_organization
+          enforce_permission_to :update, :organization
 
           @organization = current_organization
           @organization.update!(organization_params)
