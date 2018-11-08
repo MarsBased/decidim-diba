@@ -5,7 +5,7 @@ require 'ladle'
 
 # rubocop:disable Metrics/BlockLength
 describe 'When LDAP authentication is active', type: :system do
-  let(:organization) { FactoryBot.create(:organization) }
+  let(:organization) { FactoryBot.create(:organization, :with_tos) }
   let(:ldap_configuration) do
     FactoryBot.create(:ldap_configuration, organization: organization)
   end

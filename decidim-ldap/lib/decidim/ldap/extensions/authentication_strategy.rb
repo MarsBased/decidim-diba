@@ -10,6 +10,7 @@ Warden::Strategies.add(:ldap_authenticatable) do
       ldap_entry = bind_ldap(ldap, ldap_configuration)
 
       next unless ldap_entry
+
       user = find_or_create_user(ldap_entry, ldap_configuration)
       next unless user.valid?
 
@@ -58,7 +59,7 @@ Warden::Strategies.add(:ldap_authenticatable) do
       .where(email: ldap_field_value(ldap_entry, ldap_configuration.email_field))
       .or(Decidim::User.where(
             nickname: ldap_field_value(ldap_entry, ldap_configuration.username_field)
-      ))
+          ))
       .where(organization: ldap_configuration.organization).first
   end
 
@@ -68,6 +69,7 @@ Warden::Strategies.add(:ldap_authenticatable) do
     user.nickname = ldap_field_value(ldap_entry, ldap_configuration.username_field)
     user.password = Devise.friendly_token.first(8)
     user.organization = ldap_configuration.organization
+    user.accepted_tos_version = ldap_configuration.organization.tos_version
     user.name = ldap_field_value(ldap_entry, ldap_configuration.name_field)
     user.tos_agreement = true
     user.skip_confirmation!
@@ -84,6 +86,5 @@ Warden::Strategies.add(:ldap_authenticatable) do
   def ldap_configurations
     Decidim::Organization.find(params[:organization_id]).ldap_configurations
   end
-
 end
 # rubocop:enable Metrics/BlockLength

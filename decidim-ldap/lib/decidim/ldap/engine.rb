@@ -38,6 +38,9 @@ module Decidim
       end
 
       initializer 'decidim_ldap.devise_with_ldap' do
+        # TO DO: We put this on environment.rb (both, app and dummy app),the only way i've
+        # to make it work on this version (current_user error)
+
         # Decidim::Devise::SessionsController
         #   .include(Decidim::Ldap::Extensions::SessionsControllerWithLdap)
         # Decidim::Devise::RegistrationsController
@@ -51,6 +54,8 @@ module Decidim
       end
 
       initializer 'decidim_ldap.add_ldap_account_authorizations' do |_app|
+        # TO DO
+
         # Decidim.configure do |config|
         #   config.abilities += ['Decidim::Ldap::Abilities::CurrentUserAbility']
         # end
