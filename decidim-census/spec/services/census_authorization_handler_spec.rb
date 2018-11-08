@@ -8,7 +8,7 @@ RSpec.describe CensusAuthorizationHandler do
   let(:encoded_dni) { encode_id_document(dni) }
   let(:date) { Date.strptime('1990/11/21', '%Y/%m/%d') }
   let(:handler) do
-    CensusAuthorizationHandler.new(id_document: dni, birthdate: date)
+    CensusAuthorizationHandler.new(user: user, id_document: dni, birthdate: date)
                               .with_context(current_organization: organization)
   end
 
@@ -27,7 +27,7 @@ RSpec.describe CensusAuthorizationHandler do
   it 'normalizes the id document' do
     census_datum
     normalizer =
-      CensusAuthorizationHandler.new(id_document: '12-34-a', birthdate: date)
+      CensusAuthorizationHandler.new(user: user, id_document: '12-34-a', birthdate: date)
                                 .with_context(current_organization: organization)
     expect(normalizer.valid?).to be true
   end

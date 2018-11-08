@@ -18,7 +18,8 @@ PATH
     decidim-census (0.12.2)
       decidim (= 0.12.2)
       decidim-admin (= 0.12.2)
-      decidim-ldap
+      decidim-age_action_authorization
+      decidim-ldap (= 0.12.2)
       virtus-multiparams (~> 0.1.1)
 
 GEM
