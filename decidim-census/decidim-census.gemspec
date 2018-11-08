@@ -19,7 +19,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'decidim', s.version
   s.add_dependency 'decidim-admin', s.version
-  s.add_dependency 'decidim-age_action_authorization', s.version
+  s.add_dependency 'decidim-age_action_authorization'
+  s.add_dependency 'decidim-ldap', s.version
   s.add_dependency 'virtus-multiparams', '~> 0.1.1'
 
   s.add_development_dependency 'decidim-dev', s.version
