@@ -4,7 +4,9 @@ ruby '2.5.1'
 
 gem 'rails', '=5.2.0'
 
-gem 'decidim', '~> 0.12.2'
+DECIDIM_VERSION = '~> 0.12.2'
+
+gem 'decidim', DECIDIM_VERSION
 gem 'decidim-age_action_authorization', path: 'decidim-age_action_authorization'
 gem 'decidim-census', path: 'decidim-census'
 gem 'decidim-diba_census_api', path: 'decidim-diba_census_api'
@@ -18,7 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'decidim-dev', '~> 0.12.2'
+  gem 'decidim-dev', DECIDIM_VERSION
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
   gem 'faker'

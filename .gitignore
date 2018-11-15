@@ -28,3 +28,4 @@ public/uploads
 !.env.example
 .vscode/
 .DS_Store
+**/*.rspec-failures
