@@ -6,8 +6,9 @@ ruby RUBY_VERSION
 
 # This is the original line, but it doesn't work
 # gem "decidim", path: "../.."
-gem 'decidim', '~> 0.12.0'
-gem 'decidim-admin', '~> 0.12.0'
+gem 'decidim', '~> 0.14.4'
+gem 'decidim-admin', '~> 0.14.4'
+gem 'decidim-ldap', path: '../../decidim-ldap'
 
 # Uncomment the following line if you want to use decidim-assemblies plugin
 # gem "decidim-assemblies", path: "../.."
@@ -23,7 +24,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
 
   # gem "decidim-dev", path: "../.."
-  gem 'decidim-dev', '~> 0.12.0'
+  gem 'decidim-dev', '~> 0.14.4'
 end
 
 group :development do
