@@ -75,7 +75,7 @@ describe 'Manage Ldap Configurations', type: :system do
 
     within find('tr', text: ldap_configuration.dn) do
       accept_alert do
-        click_link 'Destroy'
+        click_link 'Delete'
       end
     end
 
