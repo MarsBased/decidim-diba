@@ -24,7 +24,7 @@ module Decidim
         if id_document.present? && !date.nil?
           values << [id_document, date]
         else
-          errors << row
+          errors << { line: $., data: row }
         end
       end
 

@@ -46,3 +46,8 @@ es:
           title: Subir un nuevo censo
           file: Archivo excel .csv con los datos del censo
           submit: Subir archivo
+          errors:
+            title: Errores en la importación
+            data:
+              line: Línea
+              data: Datos

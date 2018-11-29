@@ -46,3 +46,8 @@ en:
           title: Upload a new census
           file: Excel .csv file with census data
           submit: Upload file
+          errors:
+            title: Import errors
+            data:
+              line: Line
+              data: Data

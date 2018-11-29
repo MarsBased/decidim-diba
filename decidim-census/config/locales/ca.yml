@@ -46,3 +46,8 @@ ca:
           title: Pujar un nou cens
           file: Arxiu excel .csv amb les dades del cens
           submit: Carrega
+          errors:
+            title: Errors en la importació
+            data:
+              line: Línia
+              data: Dades
