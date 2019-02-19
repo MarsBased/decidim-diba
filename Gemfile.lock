@@ -215,6 +215,10 @@ GEM
     decidim-comments (0.15.2)
       decidim-core (= 0.15.2)
       jquery-rails (~> 4.0)
+    decidim-consultations (0.15.2)
+      decidim-admin (= 0.15.2)
+      decidim-comments (= 0.15.2)
+      decidim-core (= 0.15.2)
     decidim-core (0.15.2)
       active_link_to (~> 1.0)
       autoprefixer-rails (~> 8.0)
@@ -782,6 +786,7 @@ DEPENDENCIES
   decidim (= 0.15.2)
   decidim-age_action_authorization!
   decidim-census!
+  decidim-consultations
   decidim-dev (= 0.15.2)
   decidim-diba_census_api!
   decidim-ldap!
