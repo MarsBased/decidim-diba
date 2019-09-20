@@ -19,7 +19,14 @@ module Decidim
       end
 
       def valid_age?
-        (birthdate + minimum_age.years) <= Date.current
+        min_date = birthdate + minimum_age.years
+        max_date = (birthdate + options['max_age'].to_i.years if options.key?('max_age'))
+
+        if max_date
+          (min_date..max_date).cover?(Date.current)
+        else
+          min_date <= Date.current
+        end
       end
 
       def birthdate

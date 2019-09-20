@@ -19,6 +19,7 @@ en:
         fields:
           birthdate: Birthdate
           age: 'Minimum age'
+          age: 'Maximum age'
     census:
       errors:
         messages:

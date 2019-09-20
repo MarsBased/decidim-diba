@@ -21,6 +21,7 @@ ca:
         fields:
           birthdate: Data de naixement
           age: 'Edat mínima'
+          max_age: 'Edat màxima'
     features:
       proposals:
         actions:

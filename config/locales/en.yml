@@ -21,6 +21,7 @@ en:
         fields:
           birthdate: Date of birth
           age: Minimum age
+          max_age: Maximum age
     features:
       proposals:
         actions:

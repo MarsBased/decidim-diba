@@ -19,6 +19,7 @@ module Decidim
           auth.action_authorizer = 'Decidim::AgeActionAuthorization::Authorizer'
           auth.options do |options|
             options.attribute :age, type: :string, required: false
+            options.attribute :max_age, type: :string, required: false
           end
         end
       end
