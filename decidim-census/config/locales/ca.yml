@@ -20,12 +20,15 @@ ca:
           birthdate: Data de naixement
           age: 'Edat mínima'
           max_age: 'Edat máxima'
+          subcensus: 'Subcens'
     census:
       errors:
         messages:
           not_censed: No hem pogut trobar el teu document d'identitat amb aquesta data de naixement al padró municipal. Si les dades són correctes i el problema persisteix, siusplau, posa't en contacte amb un administrador.
           younger_than_minimum_age: Hauries de ser major de %{age} anys
       admin:
+        titles:
+          subcensus: Subcensos
         destroy:
           title: Esborrar totes les dades del cens
           confirm: Aquesta acció no es pot desfer. Estàs segur/a que voleu continuar?
@@ -38,6 +41,7 @@ ca:
           title: Necessites activar el mòdul de censos per a aquesta organització
           body: Per a això has d'entrar a l'administració del sistema i afegir l'autorització d'excel o la combinada a l'organització
         menu:
+          subcensus: Subcensos
           census: Pujar cens
         show:
           title: Dades del cens carregat
@@ -53,3 +57,27 @@ ca:
             data:
               line: Línia
               data: Dades
+        models:
+          subcensus:
+            fields:
+              name: Nom
+              participatory_process: Proces Participatiu
+              documents: Documents
+              created_at: Data de creació
+        subcensues:
+          index: 
+            new_subcensus: Nou Subcens
+            confirm: Aquesta acció no es pot desfer. Estàs segur/a que voleu continuar?
+          form:
+            title: Subcensos
+            select_participatory_process: Seleccionar Proces Participatiu
+          edit:
+            update: Actualitzar
+          update:
+            success: S'han guardat correctament el subcens i s'han importat amb èxit %{count} documents (%{errors} errors)
+          create:
+            success: S'han creat correctament el subcens i s'han importat amb èxit %{count} documents (%{errors} errors)
+          new:
+            create: Crear
+          destroy:
+            success: S'han esborrat totes les dades del subcens

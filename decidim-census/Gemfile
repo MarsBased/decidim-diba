@@ -6,6 +6,8 @@ source 'https://rubygems.org'
 gemspec
 
 group :test do
+  gem 'decidim'
   gem 'decidim-age_action_authorization', path: '../decidim-age_action_authorization'
+  gem 'pry-rails'
   gem 'decidim-ldap', path: '../decidim-ldap'
 end

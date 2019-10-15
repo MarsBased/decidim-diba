@@ -20,6 +20,7 @@ ca:
         fields:
           birthdate: Data de naixement
           age: Edat mínima
+          max_age: Edat màxima
         document_types:
           dni: 'DNI'
           nie: 'NIE'

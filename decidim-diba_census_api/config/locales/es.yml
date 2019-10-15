@@ -20,6 +20,7 @@ es:
         fields:
           birthdate: Fecha de nacimiento
           age: Edad mínima
+          max_age: Edad máxima
         document_types:
           dni: DNI
           nie: NIE

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_26_100964) do
+ActiveRecord::Schema.define(version: 2019_10_17_081708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -308,6 +308,22 @@ ActiveRecord::Schema.define(version: 2019_07_26_100964) do
     t.date "birthdate"
     t.datetime "created_at", null: false
     t.index ["decidim_organization_id"], name: "index_decidim_census_census_data_on_decidim_organization_id"
+  end
+
+  create_table "decidim_census_subcensus", force: :cascade do |t|
+    t.bigint "decidim_participatory_process_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_participatory_process_id"], name: "index_decidim_census_subcensuses_on_participatory_process_id"
+  end
+
+  create_table "decidim_census_subcensus_documents", force: :cascade do |t|
+    t.bigint "decidim_census_subcensus_id"
+    t.string "id_document"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_census_subcensus_id"], name: "index_census_subcensus_documents_on_census_subcensus_id"
   end
 
   create_table "decidim_coauthorships", force: :cascade do |t|

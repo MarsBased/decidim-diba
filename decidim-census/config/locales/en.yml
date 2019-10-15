@@ -20,12 +20,15 @@ en:
           birthdate: Birthdate
           age: 'Minimum age'
           age: 'Maximum age'
+          subcensus: 'Subcensus'
     census:
       errors:
         messages:
           not_censed: We could not find your document ID matching with this birthdate in our Census. If the data entered is correct and the problem persists, please, contact an administrator.
           younger_than_minimum_age: You should be older than %{age} years
       admin:
+        titles:
+          subcensus: Subcensus
         destroy:
           title: Delete all census data
           confirm: Delete all the census can not be undone. Are you sure you want to continue?
@@ -38,6 +41,7 @@ en:
           title: You need to activate the census module for this organization
           body: To do this you must enter system administration and add the excel or combined authorizations to the organization
         menu:
+          subcensus: Subcensus
           census: Upload census
         show:
           title: Current census data
@@ -53,3 +57,27 @@ en:
             data:
               line: Line
               data: Data
+        models:
+          subcensus:
+            fields:
+              name: Name
+              participatory_process: Participatory Process
+              documents: Documents
+              created_at: Created at
+        subcensues:
+          index: 
+            new_subcensus: New Subcensus
+            confirm: Delete the subcensus can not be undone. Are you sure you want to continue?
+          form:
+            title: Subcensus
+            select_participatory_process: Select Participatory Process
+          edit:
+            update: Update
+          update:
+            success: Successfully updated and imported %{count} items (%{errors} errors)
+          create:
+            success: Successfully created and imported %{count} items (%{errors} errors)
+          new:
+            create: Create
+          destroy:
+            success: All subcensus data have been deleted
