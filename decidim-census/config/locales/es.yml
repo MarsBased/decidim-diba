@@ -62,9 +62,10 @@ es:
             fields:
               name: Nombre
               participatory_process: Proceso Participativo
+              subcensus_file: Archivo excel .csv con los datos del subcenso
               documents: Documentos
               created_at: Fecha de Creación
-        subcensues:
+        subcensuses:
           index: 
             new_subcensus: Nuevo Subcenso
             confirm: Borrar el subcenso no se puede deshacer. ¿Estás seguro/a que deseas continuar?

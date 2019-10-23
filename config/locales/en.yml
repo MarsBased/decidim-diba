@@ -32,8 +32,8 @@ en:
         content:
           birthdate:
             invalid_field:
-              both: "This action is restricted to the inhabitants of the municipal census between %{min_age} and %{max_age} years."
+              both: "This action is restricted to the inhabitants of the municipal census between %{min_age} and %{max_age} years old."
               min_age: "This action is restricted to the inhabitants of the municipal census older than %{min_age} years."
               max_age: "This action is restricted to the inhabitants of the municipal census under the age of %{max_age}."
           subcensus:
-            invalid_field: "This action is restricted to a group of inhabitants of the municipal census of which you are not a part. Contact us if you think you should take part and this action is interest to you."
+            invalid_field: "This action is restricted to a group of inhabitants of the municipal census which you are not part of. Contact us if you think you should belong to this group and you are interested in being able to perform this action."

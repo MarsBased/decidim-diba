@@ -36,4 +36,4 @@ es:
               min_age: "Esta acción está restringida a los habitantes del padrón municipal mayores de %{min_age} años"
               max_age: "Esta acción está restringida a los habitantes del padrón municipal menores de %{max_age} años"
           subcensus:
-            invalid_field: "Esta acción está restringida a un conjunto de habitantes del padrón municipal del cual no formas parte. Contacta con nosotros si crees que tendrías que formar parte y esta acción es de tuyo interés."
+            invalid_field: "Esta acción está restringida a un conjunto de habitantes del padrón municipal del cual no formas parte. Contacta con nosotros si crees que tendrías que formar parte de este grupo y esta acción es de tu interés."

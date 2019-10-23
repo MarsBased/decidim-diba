@@ -8,7 +8,7 @@ module Decidim
 
       routes do
         resource :censuses, only: %i(show create destroy)
-        resources :subcensues, except: %(show)
+        resources :subcensuses, except: %i(show)
       end
 
       initializer 'decidim_census.add_admin_menu' do
@@ -24,7 +24,7 @@ module Decidim
                                     [Decidim::Census::Admin::Permissions])
 
           menu.item I18n.t('menu.subcensus', scope: 'decidim.census.admin'),
-                    decidim_census_admin.subcensues_path,
+                    decidim_census_admin.subcensuses_path,
                     icon_name: 'spreadsheet',
                     position: 7.1,
                     active: :inclusive,

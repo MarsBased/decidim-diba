@@ -5,7 +5,7 @@
     <h2 class="card-title">
       <%= t("subcensus", scope: "decidim.census.admin.titles") %>
       <%= link_to t(".new_subcensus"),
-                  decidim_census_admin.new_subcensue_path,
+                  decidim_census_admin.new_subcensus_path,
                   class: "button tiny button--title" %>
     </h2>
   </div>
@@ -33,7 +33,7 @@
           <% subcensuses.each do |subcensus| %>
             <tr>
               <td>
-                <%= link_to subcensus.name, decidim_census_admin.edit_subcensue_path(subcensus) %><br />
+                <%= link_to subcensus.name, decidim_census_admin.edit_subcensus_path(subcensus) %><br />
               </td>
               <td>
                 <%= translated_attribute(subcensus.participatory_process.title) %>
@@ -46,11 +46,11 @@
               </td>
               <td class="table-list__actions">
                 <%= icon_link_to "pencil",
-                                 decidim_census_admin.edit_subcensue_path(subcensus),
+                                 decidim_census_admin.edit_subcensus_path(subcensus),
                                  t("actions.configure", scope: "decidim.admin"),
                                  class: "action-icon--new" %>
 
-                <%= icon_link_to "circle-x", decidim_census_admin.subcensue_path(subcensus),
+                <%= icon_link_to "circle-x", decidim_census_admin.subcensus_path(subcensus),
                                  t("actions.destroy", scope: "decidim.admin"),
                                  class: "action-icon--remove",
                                  method: :delete,

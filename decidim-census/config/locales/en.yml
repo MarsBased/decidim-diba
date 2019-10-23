@@ -62,9 +62,10 @@ en:
             fields:
               name: Name
               participatory_process: Participatory Process
+              subcensus_file: Excel .csv file with subcensus data
               documents: Documents
               created_at: Created at
-        subcensues:
+        subcensuses:
           index: 
             new_subcensus: New Subcensus
             confirm: Delete the subcensus can not be undone. Are you sure you want to continue?

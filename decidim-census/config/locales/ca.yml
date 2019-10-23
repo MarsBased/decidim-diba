@@ -62,9 +62,10 @@ ca:
             fields:
               name: Nom
               participatory_process: Proces Participatiu
+              subcensus_file: Arxiu excel .csv amb les dades del subcens
               documents: Documents
               created_at: Data de creació
-        subcensues:
+        subcensuses:
           index: 
             new_subcensus: Nou Subcens
             confirm: Aquesta acció no es pot desfer. Estàs segur/a que voleu continuar?

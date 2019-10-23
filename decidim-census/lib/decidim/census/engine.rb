@@ -10,7 +10,7 @@ module Decidim
       initializer 'decidim_census.add_irregular_inflection' do |_app|
         ActiveSupport::Inflector.inflections(:en) do |inflect|
           inflect.irregular 'census', 'census'
-          inflect.irregular 'subcensus', 'subcensus'
+          inflect.irregular 'subcensus', 'subcensuses'
         end
       end
 

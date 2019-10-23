@@ -310,20 +310,20 @@ ActiveRecord::Schema.define(version: 2019_10_17_081708) do
     t.index ["decidim_organization_id"], name: "index_decidim_census_census_data_on_decidim_organization_id"
   end
 
-  create_table "decidim_census_subcensus", force: :cascade do |t|
-    t.bigint "decidim_participatory_process_id"
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["decidim_participatory_process_id"], name: "index_decidim_census_subcensuses_on_participatory_process_id"
-  end
-
   create_table "decidim_census_subcensus_documents", force: :cascade do |t|
     t.bigint "decidim_census_subcensus_id"
     t.string "id_document"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["decidim_census_subcensus_id"], name: "index_census_subcensus_documents_on_census_subcensus_id"
+  end
+
+  create_table "decidim_census_subcensuses", force: :cascade do |t|
+    t.bigint "decidim_participatory_process_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_participatory_process_id"], name: "index_decidim_census_subcensuses_on_participatory_process_id"
   end
 
   create_table "decidim_coauthorships", force: :cascade do |t|
@@ -1034,7 +1034,7 @@ ActiveRecord::Schema.define(version: 2019_10_17_081708) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "decidim_author_type", null: false
-    t.index "decidim_proposal_id, decidim_author_id, COALESCE(decidim_user_group_id, ('-1'::integer)::bigint)", name: "decidim_proposals_proposal_endorsmt_proposal_auth_ugroup_uniq", unique: true
+    t.index "decidim_proposal_id, decidim_author_id, (COALESCE(decidim_user_group_id, ('-1'::integer)::bigint))", name: "decidim_proposals_proposal_endorsmt_proposal_auth_ugroup_uniq", unique: true
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_proposals_proposal_endorsements_on_decidim_author"
     t.index ["decidim_proposal_id"], name: "decidim_proposals_proposal_endorsement_proposal"
     t.index ["decidim_user_group_id"], name: "decidim_proposals_proposal_endorsement_user_group"

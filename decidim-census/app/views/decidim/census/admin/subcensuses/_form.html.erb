@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-divider">
+    <h2 class="card-title"><%= t(".title") %></h2>
+  </div>
+
+  <div class="card-section">
+    <div class="row column">
+      <%= form.text_field :name, label: t("models.subcensus.fields.name", scope: "decidim.census.admin") %>
+    </div>
+    <div class="row column">
+      <%= form.select :participatory_process,
+                      participatory_processes.map { |p| [translated_attribute(p.title), p.id] },
+                      selected: form.object.participatory_process,
+                      label: t("models.subcensus.fields.participatory_process", scope: "decidim.census.admin"),
+                      include_blank: t(".select_participatory_process") %>
+    </div>
+    <div class="row column">
+      <%= form.file_field :subcensus_file,
+                          label: t("models.subcensus.fields.subcensus_file", scope: "decidim.census.admin") %>
+    </div>
+ </div>
+
+</div>
