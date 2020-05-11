@@ -7,10 +7,16 @@ module Decidim
       end
 
       def unmatched_fields
-        @unmatched_fields ||= (valid_age? ? [] : [:birthdate])
+        @unmatched_fields ||= set_unmatched_fields
       end
 
       private
+
+      def set_unmatched_fields
+        errors = []
+        errors << :birthdate unless valid_age?
+        errors
+      end
 
       def valid_metadata?
         return unless authorization
@@ -20,7 +26,8 @@ module Decidim
 
       def valid_age?
         min_date = birthdate + minimum_age.years
-        max_date = (birthdate + options['max_age'].to_i.years if options.key?('max_age'))
+        max_date = options['max_age'].present? &&
+          birthdate + options['max_age'].to_i.years
 
         if max_date
           (min_date..max_date).cover?(Date.current)

@@ -34,3 +34,14 @@ ca:
       user:
         invalid: Correu electrònic o contrasenya no vàlids.
         not_found_in_database: Correu electrònic o contrasenya no vàlids.
+  diba:
+    decidim:
+      authorization_modals:
+        content:
+          birthdate:
+            invalid_field:
+              both: "Aquesta acció està restringida als habitants del padró municipal entre %{min_age} i %{max_age} anys"
+              min_age: "Aquesta acció està restringida als habitants del padró municipal majors de %{min_age} anys"
+              max_age: "Aquesta acció està restringida als habitants del padró municipal menors de %{max_age} anys"
+          subcensus:
+            invalid_field: "Aquesta acció està restringida a un conjunt d'habitants del padró municipal del qual no en formes part. Contacta amb nosaltres si creus que n'hauries de formar part i aquesta acció és de teu interés."

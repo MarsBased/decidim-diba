@@ -1,4 +1,3 @@
-
 module Decidim
   module Census
     # Provides information about the current status of the census data

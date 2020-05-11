@@ -1,5 +1,7 @@
 ENV['RAILS_ENV'] ||= 'test'
 
+require 'pry'
+require 'decidim'
 require 'decidim/dev'
 require 'decidim/admin'
 require 'decidim/core'

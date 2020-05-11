@@ -26,3 +26,14 @@ es:
       proposals:
         actions:
           withdraw: Retirar
+  diba:
+    decidim:
+      authorization_modals:
+        content:
+          birthdate:
+            invalid_field:
+              both: "Esta acción está restringida a los habitantes del padrón municipal entre %{min_age} y %{max_age} años"
+              min_age: "Esta acción está restringida a los habitantes del padrón municipal mayores de %{min_age} años"
+              max_age: "Esta acción está restringida a los habitantes del padrón municipal menores de %{max_age} años"
+          subcensus:
+            invalid_field: "Esta acción está restringida a un conjunto de habitantes del padrón municipal del cual no formas parte. Contacta con nosotros si crees que tendrías que formar parte de este grupo y esta acción es de tu interés."
